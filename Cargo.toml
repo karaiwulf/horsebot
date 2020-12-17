@@ -1,0 +1,15 @@
+[package]
+name = "horsebot"
+version = "0.1.0"
+authors = ["Kararou Ren <ren@kararou.space>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serenity = "0.8"
+daemonize = "0.4.1"
+syslog = "5.0"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+regex = "1"
+rand = "0.4.2"
