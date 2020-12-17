@@ -19,7 +19,7 @@ impl EventHandler for Handler {
     fn message(&self, ctx: Context, msg: Message) {
         let horsere = Regex::new(r".*[Hh][Oo][Rr][Ss][Ee].*").unwrap();
         if horsere.is_match(&msg.content) {
-            let between = Range::new(10,2600);
+            let between = Range::new(2600,10240);
             let mut rng = rand::thread_rng();
             thread::sleep(time::Duration::from_secs(between.ind_sample(&mut rng)));
             if let Err(e) = msg.channel_id.say(&ctx.http, "horse") {
